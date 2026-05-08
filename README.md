@@ -1,62 +1,36 @@
-# Customer Sign-Up Behaviour & Data Quality Analysis
+# 📊 RapidScale SaaS: End-to-End Data Quality Audit & Business Intelligence
+
 
 ## 📌 Project Overview
-This project analyses customer sign-up behaviour for a SaaS company (Rapid Scale) and performs a data quality audit on the dataset. The goal is to generate insights that support business decisions in marketing and onboarding.
+This repository contains a full-cycle data analytics project conducted during my internship at **Uptrail**. The goal was to audit RapidScale's customer sign-up data, resolve critical data integrity issues, and build an executive-ready dashboard to drive marketing and onboarding strategy.
+
+### 🎯 Key Objectives
+- Data Integrity: Audit raw datasets to identify missing values, duplicates, and attribution gaps.
+- User Behavior: Analyze acquisition channels and plan adoption trends.
+- Onboarding Optimization:Pinpoint friction zones in the user journey via support ticket analysis.
 
 ---
 
-## 📊 Dataset
-- Customer dataset: 300 records
-- Fields include:
-  - customer_id, signup_date, source, region
-  - plan_selected, marketing_opt_in, age, gender
+## 🛠 Tech Stack
+- SQL: Data auditing and initial gap analysis.
+- Python (Pandas): Data cleaning, handling null values, and standardization.
+- Power BI: Interactive dashboarding and time-series visualization.
+- Power Query & DAX: Advanced data modeling and KPI calculation.
 
 ---
 
-## 🧹 Data Cleaning
-- Handled missing values (email, region, age, etc.)
-- Standardised inconsistent categories (e.g., PRO → Pro)
-- Converted data types (dates to datetime)
-- Removed duplicates and invalid records
+## 📈 Key Insights & Impact
+- Channel Growth: Identified YouTube as the primary driver for high-tier (Premium/Professional) plan sign-ups.
+- Friction Zone: Discovered that the majority of support tickets are generated within the first 14 days of onboarding, signaling a need for better in-app tutorials.
+- Marketing Engagement:Found that Female users represent the most engaged segment, with a 42% total marketing opt-in rate.
+- Data Governance: Uncovered an 11% gap in regional data, leading to a recommendation for mandatory field enforcement.
 
 ---
 
-## 📈 Key Insights
-- Weekly sign-ups remained stable (avg. 6–7 users)
-- Peak sign-up reached 13 users, minimum dropped to 1
-- Google was the top acquisition source in the most recent period
-- Premium plan was the most selected overall
-- Pro users generated the highest support requests
-
----
-
-## 📉 Data Quality Issues
-- Missing values in key fields (email: 11.3%, region: 10%)
-- Presence of unknown acquisition sources (NaN values)
-- Inconsistent categorical data
-
----
-
-## 💡 Recommendations
-- Focus marketing efforts on high-performing channels (Google, Instagram)
-- Improve tracking using UTM parameters
-- Enhance onboarding for Pro and Basic users
-
----
-
-## 🛠 Tools Used
-- Python (Pandas, NumPy)
-- Jupyter Notebook
-- Data Cleaning & Analysis Techniques
-
----
-
-## 📎 Project Files
-- `customer_signup_project.ipynb` – Analysis notebook
-- `report.pdf` – Final report
-
----
-
-## 🚀 Author
-Augustine Cudjoe
-
+## 📂 Repository Structure
+```text
+├── data/               # Raw and Cleaned datasets
+├── notebooks/          # Python/Pandas cleaning scripts
+├── sql/                # SQL Audit queries
+├── dashboards/         # Power BI (.pbix) file
+└── reports/            # Final Executive PDF Report (Augustine_RapidScale_Report_week1.pdf)
